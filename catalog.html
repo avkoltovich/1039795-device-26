@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Девайс</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="nav">
+      <a class="nav__link--logo">
+        <img src="img/logo.svg" width="163" height="35" alt="DEVICE">
+      </a>
+      <div class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="" class="main-nav__link">Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="" class="main-nav__link">Доставка</a></li>
+          <li class="main-nav__item"><a href="" class="main-nav__link">Гарантия</a></li>
+          <li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
+        </ul>
+      </div>
+      <div class="user-nav">
+        <ul class="user-nav__list">
+          <li class="user-nav__item">
+            <button type="button">Поиск</button>
+          </li>
+          <li class="user-nav__item">
+            <a href="" class="user-nav__link">
+              Войти
+            </a>
+          </li>
+          <li class="user-nav__item">
+            <a href="" class="user-nav__link">
+              Сравнить
+            </a>
+          </li>
+          <li class="user-nav__item">
+            <a href="" class="user-nav__link">
+              Корзина
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <h1 class="main__title">
+      Моноподы для селфи
+    </h1>
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+        <a href="" class="breadcrumbs__link">Главная</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a href="" class="breadcrumbs__link">Каталог товаров</a>
+      </li>
+      <li class="breadcrumbs__item">
+        <a class="breadcrumbs__link--current">Моноподы для селфи</a>
+      </li>
+    </ul>
+    <section class="filter">
+      <h2 class="filter__heading">Фильтр:</h2>
+      <form action="">
+        <fieldset class="filter__price">
+          <legend class="filter__name">Стоимость</legend>
+          <label>
+            <button type="button"></button>
+            от 0
+          </label>
+          <label>
+            <button type="button"></button>
+            до 5000
+          </label>
+        </fieldset>
+        <fieldset class="filter__color">
+          <legend class="filter__name">Цвет</legend>
+          <label>
+            <input type="checkbox" name="">
+            Черный
+          </label>
+          <label>
+            <input type="checkbox" name="">
+            Белый
+          </label>
+          <label>
+            <input type="checkbox" name="">
+            Синий
+          </label>
+          <label>
+            <input type="checkbox" name="">
+            Красный
+          </label>
+          <label>
+            <input type="checkbox" name="">
+            Розовый
+          </label>
+        </fieldset>
+        <fieldset class="filter__bluetooth">
+          <legend class="filter__name">Bluetooth</legend>
+          <label>
+            <input type="radio" name="">
+            Есть
+          </label>
+          <label>
+            <input type="radio" name="">
+            Нет
+          </label>
+        </fieldset>
+        <button class="filter__button" type="submit">Показать</button>
+      </form>
+    </section>
+    <section class="sorting">
+      <h2 class="sorting__title">Сортировка:</h2>
+      <ul class="sorting__list">
+        <li class="sorting__item">
+          <button class="sorting__button">По цене</button>
+        </li>
+        <li class="sorting__item">
+          <button class="sorting__button">По типу</button>
+        </li>
+        <li class="sorting__item">
+          <button class="sorting__button">По популярности</button>
+        </li>
+        <li class="sorting__item--up">
+          <button class="sorting__button--up"><span>По возрастанию</span></button>
+        </li>
+        <li class="sorting__item--down">
+          <button class="sorting__button--down">По убыванию</button>
+        </li>
+      </ul>
+    </section>
+    <section class="catalog">
+      <h2 class="visually-hidden">Каталог товаров</h2>
+      <ul class="catalog__list">
+        <li class="catalog__item">
+          <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+          <h3 class="catalog__item-title">Любительская селфи-палка</h3>
+          <b class="catalog__item-price">500 руб.</b>
+        </li>
+        <li class="catalog__item">
+          <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+          <h3 class="catalog__item-title">Профессиональная селфи-палка</h3>
+          <b class="catalog__item-price">1 500 руб.</b>
+        </li>
+        <li class="catalog__item">
+          <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+          <h3 class="catalog__item-title">Непотопляемая селфи-палка</h3>
+          <b class="catalog__item-price">2 500 руб.</b>
+        </li>
+        <li class="catalog__item">
+          <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+          <h3 class="catalog__item-title">Селфи-палка «Следуй за мной»</h3>
+          <b class="catalog__item-price">4 900 руб.</b>
+        </li>
+      </ul>
+      <ul class="catalog__pagination">
+        <li class="pagination__item">
+          <a href="" class="pagination__link">Назад</a>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">1</a>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">2</a>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">3</a>
+        </li>
+        <li class="pagination__item">
+          <a href="" class="pagination__link">Вперед</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <p class="footer__address">
+      <img src="img/device.svg" width="163" height="35" alt="DEVICE">
+      <address>
+        г. Москва, ул. Строителей, 15
+      </address>
+      <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+    </p>
+    <div class="footer__link-wrapper"></div>
+    <nav class="footer__nav">
+      <ul class="footer__list--nav">
+        <li class="footer__item--nav">
+          <a href="" class="footer__link--nav">
+            Доставка
+          </a>
+        </li>
+        <li class="footer__item--nav">
+          <a href="" class="footer__link--nav">
+            Гарантия
+          </a>
+        </li>
+        <li class="footer__item--nav">
+          <a href="" class="footer__link--nav">
+            Контакты
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <ul class="footer__list--social">
+      <li class="footer__item--social">
+        <a href="" class="footer__link--social">
+          <img class="footer__social-icon" src="img/fb.svg" alt="Facebook">
+          <span class="visually-hidden">Facebook</span>
+        </a>
+      </li>
+      <li class="footer__item--social">
+        <a href="" class="footer__link--social">
+          <img class="footer__social-icon" src="img/inst.svg" alt="Instagram">
+          <span class="visually-hidden">Instagram</span>
+        </a>
+      </li>
+      <li class="footer__item--social">
+        <a href="" class="footer__link--social">
+          <img class="footer__social-icon" src="img/tw.svg" alt="Twitter">
+          <span class="visually-hidden">Twitter</span>
+        </a>
+      </li>
+    </ul>
+    </div>
+    <ul class="footer__list--user">
+      <li class="footer__item--user">
+        <a href="" class="footer__link--user">
+          Войти
+        </a>
+      </li>
+      <li class="footer__item--user">
+        <a href="" class="footer__link--user">
+          Сравнить
+        </a>
+      </li>
+      <li class="footer__item--user">
+        <a href="" class="footer__link--user">
+          Корзина
+        </a>
+      </li>
+    </ul>
+    <a href="" class="footer__link--dev">
+      <img class="footer__image--dev" src="img/logo-htmlacademy.svg" alt="Сделано в HTML Academy">
+    </a>
+  </footer>
+
+</body>
+
+</html>
