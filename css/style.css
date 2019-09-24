@@ -55,3 +55,30 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.header {
+  position: relative;
+}
+
+.header::before {
+  position: absolute;
+  z-index: -1;
+  top: 40px;
+
+
+  content: "";
+  width: 100%;
+  height: 299px;
+
+  background-color: #f8e296;
+}
+
+.nav__img--logo {
+  margin-top: 21px;
+  margin-left: 59px;
+}
