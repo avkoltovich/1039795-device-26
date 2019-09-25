@@ -278,9 +278,15 @@ body {
 
 .nav-catalog__wrapper {
   position: absolute;
-  top: 53px;
+  top: 18px;
+  left: -40px;
 
-  width: 555px;
+  display: none;
+  width: 620px;
+  padding-top: 36px;
+  padding-left: 40px;
+  
+  background-color: #f8e296;
 }
 
 .nav-catalog__list {
@@ -310,4 +316,12 @@ body {
 .nav-catalog__link {
   text-decoration: none;
   color: inherit;
+}
+
+.main-nav__link--catalog:hover~.nav-catalog__wrapper {
+  display: block;
+}
+
+.nav-catalog__wrapper:hover {
+  display: block;
 }
