@@ -97,61 +97,87 @@
     <section class="slider container">
       <h2 class="visually-hidden">Популярные товары</h2>
       <figure class="slider__item">
-        <img src="img/slide1.png" width="384" height="486" alt="Монопод для селфи">
-        <figcaption>
-          <h3>Делай селфи,<br> как Бен Стиллер!</h3>
-          <p>
+        <img class="slider__img" src="img/slide1.png" width="384" height="486" alt="Монопод для селфи">
+        <figcaption class="slider__figcaption">
+          <h3 class="slider__title">Делай селфи,<br> как Бен Стиллер!</h3>
+          <span class="slider__number">01</span>
+          <p class="slider__text">
             Самая длинная палка для селфи доступна в нашем магазине.<br>
             Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
           </p>
-          <dl>
-            <dt>Длина палки</dt>
-            <dd>8,5 м</dd>
-            <dt>Вес палки</dt>
-            <dd>5 кг</dd>
-            <dt>Материал</dt>
-            <dd>Карбон</dd>
+          <dl class="slider__table slider-table">
+            <div class="slider-table__cell">
+              <dt class="slider-table__title">Длина палки</dt>
+              <dd class="slider-table__description">8,5 м</dd>
+            </div>
+            <div class="slider-table__cell">
+              <dt class="slider-table__title">Вес палки</dt>
+              <dd class="slider-table__description">5 кг</dd>
+            </div>
+            <div class="slider-table__cell">
+              <dt class="slider-table__title">Материал</dt>
+              <dd class="slider-table__description">Карбон</dd>
+            </div>
           </dl>
-          <a class="slider__link" href="">Подробнее</a>
+          <div class="slider__button-block">
+            <a class="slider__link" href="">Подробнее</a>
+            <div class="slider__controls">
+                <button class="slider__button" type="button"></button>
+                <button class="slider__button" type="button"></button>
+                <button class="slider__button" type="button"></button>
+              </div>
+          </div>
         </figcaption>
       </figure>
-      <figure class="slider__item">
+      <figure class="slider__item visually-hidden">
         <img src="img/slide2.png" width="345" height="485" alt="Фитнес браслет">
         <figcaption>
-          <h3>Худеем<br> правильно!</h3>
-          <p>
+          <h3 class="slider__title">Худеем<br> правильно!</h3>
+          <span class="slider__number">02</span>
+          <p class="slider__text">
             Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
             не пропускать занятия и соблюдать диету.
           </p>
-          <dl>
-            <dt>Без подзарядки</dt>
-            <dd>48 часов</dd>
+          <dl class="slider__table">
+            <div class="slider-table__cell">
+              <dt class="slider-table__title">Без подзарядки</dt>
+              <dd class="slider-table__description">48 часов</dd>
+            </div>
           </dl>
           <a class="slider__link" href="">Подробнее</a>
+          <div class="slider__controls">
+              <button class="slider__button" type="button"></button>
+              <button class="slider__button" type="button"></button>
+              <button class="slider__button" type="button"></button>
+            </div>
         </figcaption>
       </figure>
-      <figure class="slider__item">
+      <figure class="slider__item visually-hidden">
         <img src="img/slide3.png" width="526" height="334" alt="Квадрокоптер">
         <figcaption>
-          <h3>Порхает как бабочка,<br>жалит как пчела!</h3>
-          <p>
+          <h3 class="slider__title">Порхает как бабочка,<br>жалит как пчела!</h3>
+          <p class="slider__text">
             Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
             мощным лазером, замаскированным под стандартную камеру.
           </p>
-          <dl>
-            <dt>Дальность полета</dt>
-            <dd>800 м</dd>
-            <dt>Радиус поражения</dt>
-            <dd>50 м</dd>
+          <dl class="slider__table">
+            <div class="slider-table__cell">
+              <dt class="slider-table__title">Дальность полета</dt>
+              <dd class="slider-table__description">800 м</dd>
+            </div>
+            <div class="slider-table__cell">
+              <dt class="slider-table__title">Радиус поражения</dt>
+              <dd class="slider-table__description">50 м</dd>
+            </div>
           </dl>
           <a class="slider__link" href="">Подробнее</a>
+          <div class="slider__controls">
+              <button class="slider__button" type="button"></button>
+              <button class="slider__button" type="button"></button>
+              <button class="slider__button" type="button"></button>
+            </div>
         </figcaption>
       </figure>
-      <div class="slider__controls">
-        <button class="slider__button" type="button"></button>
-        <button class="slider__button" type="button"></button>
-        <button class="slider__button" type="button"></button>
-      </div>
     </section>
     <section class="pop-section container">
       <h2 class="visually-hidden">Популярные разделы каталога</h2>
@@ -309,15 +335,15 @@
   </main>
   <footer class="main-footer">
     <div class="main-footer__wrapper container">
-      <p class="footer__address">
+      <div class="footer__address">
         <img src="img/device.svg" width="163" height="35" alt="DEVICE">
         <address>
           г. Москва, ул. Строителей, 15
         </address>
         <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-      </p>
-      <div class="footer__link-wrapper"></div>
-      <nav class="footer__nav">
+      </div>
+      <div class="footer__link-wrapper">
+      <div class="footer__nav">
         <ul class="footer__list--nav">
           <li class="footer__item--nav">
             <a href="" class="footer__link--nav">
@@ -335,7 +361,7 @@
             </a>
           </li>
         </ul>
-      </nav>
+      </div>
       <ul class="footer__list--social">
         <li class="footer__item--social">
           <a href="" class="footer__link--social">
