@@ -14,34 +14,43 @@
       <a class="nav__link--logo">
         <img class="nav__img--logo" src="img/logo.svg" alt="DEVICE">
       </a>
+      <div class="user-nav">
+        <ul class="user-nav__list">
+          <li class="user-nav__item user-nav__item--search">
+            <label class="user-nav__search" for="search">
+              <span class="visually-hidden">Поиск</span>
+            </label>
+              <img class="user-nav__icon--search" src="img/search.svg" width="16" height="16" alt="Поиск">
+              <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+              <button class="user-nav__button">Найти</button>
+              <span class="user-nav__border-bottom"></span>
+          </li>
+          <li class="user-nav__item user-nav__item--left">
+            <a href="" class="user-nav__link">
+              <img class="user-nav__icon--user" src="img/user.svg" width="13" height="12" alt="Войти">
+              Войти
+            </a>
+          </li>
+          <li class="user-nav__item user-nav__item--right">
+            <a href="" class="user-nav__link">
+              <img class="user-nav__icon--compare" src="img/compare.svg" width="10" height="10" alt="Сравнить">
+              Сравнить
+            </a>
+          </li>
+          <li class="user-nav__item user-nav__item--right">
+            <a href="" class="user-nav__link">
+              <img class="user-nav__icon--cart" src="img/cart.svg" width="12" height="12" alt="Корзина">
+              Корзина
+            </a>
+          </li>
+        </ul>
+      </div>
       <div class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a href="" class="main-nav__link">Каталог товаров</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">Доставка</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">Гарантия</a></li>
           <li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
-        </ul>
-      </div>
-      <div class="user-nav">
-        <ul class="user-nav__list">
-          <li class="user-nav__item">
-            <button type="button">Поиск</button>
-          </li>
-          <li class="user-nav__item">
-            <a href="" class="user-nav__link">
-              Войти
-            </a>
-          </li>
-          <li class="user-nav__item">
-            <a href="" class="user-nav__link">
-              Сравнить
-            </a>
-          </li>
-          <li class="user-nav__item">
-            <a href="" class="user-nav__link">
-              Корзина
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
