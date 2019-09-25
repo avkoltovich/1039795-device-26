@@ -84,6 +84,10 @@ body {
   padding-left: 59px;
 }
 
+.user-nav {
+  margin-bottom: 28px;
+}
+
 .user-nav__list {
   display: flex;
   justify-content: flex-end;
@@ -215,9 +219,15 @@ body {
   margin-right: 7px;
 }
 
-
+.main-nav {
+  margin: 0;
+}
 
 .main-nav__list {
+  display: flex;
+  padding-right: 58px;
+  padding-left: 0;
+
   list-style: none;
 }
 
@@ -227,10 +237,31 @@ body {
   font-weight: 800;
   line-height: 1.33;
   letter-spacing: 3.6px;
+  text-transform: uppercase;
+  
   color: #000;
+}
+
+.main-nav__item--catalog {
+  margin: 0;
+  width: 540px;
+}
+
+.main-nav__item--left {
+  margin-right: 34px;
+}
+
+.main-nav__item--right {
+  margin-left: auto;
 }
 
 .main-nav__link {
   text-decoration: none;
   color: inherit;
+}
+
+.main-nav__icon {
+  margin-left: 2px;
+
+  opacity: 0.3;
 }

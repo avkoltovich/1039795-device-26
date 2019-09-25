@@ -20,10 +20,10 @@
             <label class="user-nav__search" for="search">
               <span class="visually-hidden">Поиск</span>
             </label>
-              <img class="user-nav__icon--search" src="img/search.svg" width="16" height="16" alt="Поиск">
-              <input type="search" name="search" id="search" placeholder="Поиск по сайту">
-              <button class="user-nav__button">Найти</button>
-              <span class="user-nav__border-bottom"></span>
+            <img class="user-nav__icon--search" src="img/search.svg" width="16" height="16" alt="Поиск">
+            <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+            <button class="user-nav__button">Найти</button>
+            <span class="user-nav__border-bottom"></span>
           </li>
           <li class="user-nav__item user-nav__item--left">
             <a href="" class="user-nav__link">
@@ -47,10 +47,21 @@
       </div>
       <div class="main-nav">
         <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="" class="main-nav__link">Каталог товаров</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Доставка</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Гарантия</a></li>
-          <li class="main-nav__item"><a href="" class="main-nav__link">Контакты</a></li>
+          <li class="main-nav__item main-nav__item--catalog">
+            <a href="" class="main-nav__link">
+              Каталог товаров
+              <img class="main-nav__icon" src="img/plus.svg" width="16" height="16" alt="Раскрыть">
+            </a>
+          </li>
+          <li class="main-nav__item main-nav__item--left">
+            <a href="" class="main-nav__link">Доставка</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="" class="main-nav__link">Гарантия</a>
+          </li>
+          <li class="main-nav__item main-nav__item--right">
+            <a href="" class="main-nav__link">Контакты</a>
+          </li>
         </ul>
       </div>
     </nav>
