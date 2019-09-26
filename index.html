@@ -97,7 +97,8 @@
     <section class="slider container">
       <h2 class="visually-hidden">Популярные товары</h2>
       <figure class="slider__item">
-        <img class="slider__img" src="img/slide1.png" width="384" height="486" alt="Монопод для селфи">
+        <img class="slider__img slider__img--stick" src="img/slide1.png" width="384" height="486"
+          alt="Монопод для селфи">
         <figcaption class="slider__figcaption">
           <h3 class="slider__title">Делай селфи,<br> как Бен Стиллер!</h3>
           <span class="slider__number">01</span>
@@ -120,47 +121,56 @@
             </div>
           </dl>
           <div class="slider__button-block">
-            <a class="slider__link" href="">Подробнее</a>
-            <div class="slider__controls">
-                <button class="slider__button" type="button"></button>
-                <button class="slider__button" type="button"></button>
-                <button class="slider__button" type="button"></button>
-              </div>
+            <button class="slider__button">
+              Подробнее
+            </button>
+            <span class="slider__button-bg"></span>
+            <div class="slider__control-list">
+              <button class="slider__control" type="button"></button>
+              <button class="slider__control" type="button"></button>
+              <button class="slider__control" type="button"></button>
+            </div>
           </div>
         </figcaption>
       </figure>
-      <figure class="slider__item visually-hidden">
-        <img src="img/slide2.png" width="345" height="485" alt="Фитнес браслет">
-        <figcaption>
+      <figure class="slider__item display-none">
+        <img class="slider__img slider__img--watch" src="img/slide2.png" width="345" height="485" alt="Фитнес браслет">
+        <figcaption class="slider__figcaption">
           <h3 class="slider__title">Худеем<br> правильно!</h3>
           <span class="slider__number">02</span>
           <p class="slider__text">
             Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
             не пропускать занятия и соблюдать диету.
           </p>
-          <dl class="slider__table">
+          <dl class="slider__table slider-table">
             <div class="slider-table__cell">
               <dt class="slider-table__title">Без подзарядки</dt>
               <dd class="slider-table__description">48 часов</dd>
             </div>
           </dl>
-          <a class="slider__link" href="">Подробнее</a>
-          <div class="slider__controls">
+          <div class="slider__button-block">
+            <button class="slider__button">
+              Подробнее
+            </button>
+            <span class="slider__button-bg"></span>
+            <div class="slider__controls">
               <button class="slider__button" type="button"></button>
               <button class="slider__button" type="button"></button>
               <button class="slider__button" type="button"></button>
             </div>
+          </div>
         </figcaption>
       </figure>
-      <figure class="slider__item visually-hidden">
-        <img src="img/slide3.png" width="526" height="334" alt="Квадрокоптер">
-        <figcaption>
+      <figure class="slider__item display-none">
+        <img class="slider__img slider__img--quadro" src="img/slide3.png" width="526" height="334" alt="Квадрокоптер">
+        <figcaption class="slider__figcaption">
           <h3 class="slider__title">Порхает как бабочка,<br>жалит как пчела!</h3>
+          <span class="slider__number">03</span>
           <p class="slider__text">
             Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
             мощным лазером, замаскированным под стандартную камеру.
           </p>
-          <dl class="slider__table">
+          <dl class="slider__table slider-table">
             <div class="slider-table__cell">
               <dt class="slider-table__title">Дальность полета</dt>
               <dd class="slider-table__description">800 м</dd>
@@ -170,12 +180,17 @@
               <dd class="slider-table__description">50 м</dd>
             </div>
           </dl>
-          <a class="slider__link" href="">Подробнее</a>
-          <div class="slider__controls">
+          <div class="slider__button-block">
+            <button class="slider__button">
+              Подробнее
+            </button>
+            <span class="slider__button-bg"></span>
+            <div class="slider__controls">
               <button class="slider__button" type="button"></button>
               <button class="slider__button" type="button"></button>
               <button class="slider__button" type="button"></button>
             </div>
+          </div>
         </figcaption>
       </figure>
     </section>
@@ -184,88 +199,104 @@
       <ul class="pop-section__list">
         <li class="pop-section__item">
           <a href="" class="pop-section__link">
-            <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
-            <h3 class="pop-section__title">Виртуальная реальность</h3>
+            <div class="pop-section__img-wrapper">
+              <img class="pop-section__img" src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
+            </div>
+            <h3 class="pop-section__title">Виртуальная<br> реальность</h3>
           </a>
         </li>
         <li class="pop-section__item">
           <a href="" class="pop-section__link">
-            <img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
-            <h3 class="pop-section__title">Моноподы для селфи</h3>
+            <div class="pop-section__img-wrapper">
+              <img class="pop-section__img" src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
+            </div>
+            <h3 class="pop-section__title">Моноподы<br> для селфи</h3>
           </a>
         </li>
         <li class="pop-section__item">
           <a href="" class="pop-section__link">
-            <img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+            <div class="pop-section__img-wrapper">
+              <img class="pop-section__img" src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
+            </div>
             <h3 class="pop-section__title">Экшн-камеры</h3>
           </a>
         </li>
         <li class="pop-section__item">
           <a href="" class="pop-section__link">
-            <img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+            <div class="pop-section__img-wrapper">
+              <img class="pop-section__img" src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
+            </div>
             <h3 class="pop-section__title">Фитнес-браслеты</h3>
           </a>
         </li>
         <li class="pop-section__item">
           <a href="" class="pop-section__link">
-            <img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+            <div class="pop-section__img-wrapper">
+              <img class="pop-section__img" src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
+            </div>
             <h3 class="pop-section__title">Умные часы</h3>
           </a>
         </li>
         <li class="pop-section__item">
           <a href="" class="pop-section__link">
-            <img src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+            <div class="pop-section__img-wrapper">
+              <img class="pop-section__img" src="img/popular-6.svg" width="132" height="69" alt="Квадрокоптеры">
+            </div>
             <h3 class="pop-section__title">Квадрокоптеры</h3>
           </a>
         </li>
       </ul>
     </section>
     <section class="service">
+      <h2 class="visually-hidden">Сервис</h2>
       <div class="service__wrapper container">
-        <h2 class="visually-hidden">Сервис</h2>
         <ul class="service__list">
-          <li class="service__item">
-            <button class="service__button">Доставка</button>
+          <li class="service__item service__item--current">
+            <button class="service__button">
+              Доставка
+            </button>
+            <span class="service__button-bg"></span>
           </li>
           <li class="service__item">
-            <button class="service__button">Гарантия</button>
+            <button class="service__button">
+              Гарантия
+            </button>
+            <span class="service__button-bg"></span>
           </li>
           <li class="service__item">
-            <button class="service__button">Кредит</button>
+            <button class="service__button">
+              Кредит
+            </button>
+            <span class="service__button-bg"></span>
           </li>
         </ul>
-        <figure class="service__figure">
-          <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
-          <figcaption>
-            <h3 class="service__title">Доставка</h3>
-            <p class="service__text">
-              Мы с удовольствием доставим ваш товар прямо к вашему<br>
-              подъезду совершенно бесплатно! Ведь мы неплохо<br>
-              заработаем, поднимая его на ваш этаж.
-            </p>
-          </figcaption>
-        </figure>
-        <figure class="service__figure">
-          <img src="img/warranty.svg" width="171" height="194" alt="Гарантия">
+        <div class="service__text-wrapper">
+          <h3 class="service__title">Доставка</h3>
+          <p class="service__text">
+            Мы с удовольствием доставим ваш товар прямо к вашему<br>
+            подъезду совершенно бесплатно! Ведь мы неплохо<br>
+            заработаем, поднимая его на ваш этаж.
+          </p>
+        </div>
+        <div class="service__text-wrapper display-none">
           <h3 class="service__title">Гарантия</h3>
           <p class="service__text">
             Если из-за возгорания купленного у нас товара у вас сгорит<br>
             дом — не переживайте, мы выдадим вам новый.<br>
             Товар, не дом, конечно же.
           </p>
-        </figure>
-        <figure class="service__figure">
-          <img src="img/credit.svg" width="156" height="186" alt="Кредит">
+        </div>
+        <div class="service__text-wrapper display-none">
           <h3 class="service__title">Кредит</h3>
           <p class="service__text">
             Залезть в долговую яму стало проще! Кредитные<br>
             консультанты подберут для вас наиболее выгодные<br>
             условия кредита. Выгодные для нашего банка, разумеется.
           </p>
-        </figure>
+        </div>
       </div>
     </section>
-    <section class="pop-brands">
+    <section class="pop-brands container">
       <h2 class="visually-hidden">
         Популярные бренды
       </h2>
@@ -292,7 +323,7 @@
         </li>
       </ul>
     </section>
-    <div class="wrapper-about-contacts">
+    <div class="wrapper-about-contacts container">
       <section class="about">
         <h2 class="about__title">
           О нас
@@ -343,66 +374,66 @@
         <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       </div>
       <div class="footer__link-wrapper">
-      <div class="footer__nav">
-        <ul class="footer__list--nav">
-          <li class="footer__item--nav">
-            <a href="" class="footer__link--nav">
-              Доставка
+        <div class="footer__nav">
+          <ul class="footer__list--nav">
+            <li class="footer__item--nav">
+              <a href="" class="footer__link--nav">
+                Доставка
+              </a>
+            </li>
+            <li class="footer__item--nav">
+              <a href="" class="footer__link--nav">
+                Гарантия
+              </a>
+            </li>
+            <li class="footer__item--nav">
+              <a href="" class="footer__link--nav">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer__list--social">
+          <li class="footer__item--social">
+            <a href="" class="footer__link--social">
+              <img class="footer__social-icon" src="img/fb.svg" alt="Facebook">
+              <span class="visually-hidden">Facebook</span>
             </a>
           </li>
-          <li class="footer__item--nav">
-            <a href="" class="footer__link--nav">
-              Гарантия
+          <li class="footer__item--social">
+            <a href="" class="footer__link--social">
+              <img class="footer__social-icon" src="img/inst.svg" alt="Instagram">
+              <span class="visually-hidden">Instagram</span>
             </a>
           </li>
-          <li class="footer__item--nav">
-            <a href="" class="footer__link--nav">
-              Контакты
+          <li class="footer__item--social">
+            <a href="" class="footer__link--social">
+              <img class="footer__social-icon" src="img/tw.svg" alt="Twitter">
+              <span class="visually-hidden">Twitter</span>
             </a>
           </li>
         </ul>
       </div>
-      <ul class="footer__list--social">
-        <li class="footer__item--social">
-          <a href="" class="footer__link--social">
-            <img class="footer__social-icon" src="img/fb.svg" alt="Facebook">
-            <span class="visually-hidden">Facebook</span>
+      <ul class="footer__list--user">
+        <li class="footer__item--user">
+          <a href="" class="footer__link--user">
+            Войти
           </a>
         </li>
-        <li class="footer__item--social">
-          <a href="" class="footer__link--social">
-            <img class="footer__social-icon" src="img/inst.svg" alt="Instagram">
-            <span class="visually-hidden">Instagram</span>
+        <li class="footer__item--user">
+          <a href="" class="footer__link--user">
+            Сравнить
           </a>
         </li>
-        <li class="footer__item--social">
-          <a href="" class="footer__link--social">
-            <img class="footer__social-icon" src="img/tw.svg" alt="Twitter">
-            <span class="visually-hidden">Twitter</span>
+        <li class="footer__item--user">
+          <a href="" class="footer__link--user">
+            Корзина
           </a>
         </li>
       </ul>
-    </div>
-    <ul class="footer__list--user">
-      <li class="footer__item--user">
-        <a href="" class="footer__link--user">
-          Войти
-        </a>
-      </li>
-      <li class="footer__item--user">
-        <a href="" class="footer__link--user">
-          Сравнить
-        </a>
-      </li>
-      <li class="footer__item--user">
-        <a href="" class="footer__link--user">
-          Корзина
-        </a>
-      </li>
-    </ul>
-    <a href="" class="footer__link--dev">
-      <img class="footer__image--dev" src="img/logo-htmlacademy.svg" alt="Сделано в HTML Academy">
-    </a>
+      <a href="" class="footer__link--dev">
+        <img class="footer__image--dev" src="img/logo-htmlacademy.svg" alt="Сделано в HTML Academy">
+      </a>
     </div>
   </footer>
 
