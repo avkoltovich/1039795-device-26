@@ -92,7 +92,7 @@ body {
 
 .user-nav__list {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   padding-left: 0;
   padding-right: 61px;
 
@@ -591,6 +591,8 @@ body {
 .service {
   width: 100%;
   min-height: 288px;
+  margin-bottom: 93px;
+
   background-color: #e5e5e5;
 }
 
@@ -715,10 +717,33 @@ body {
   color: #464646;
 }
 
+.pop-brands__list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0;
 
+  list-style: none;
+}
 
+.pop-brands__img-bg--DJI {
+  background-image: url("../img/brand-color1.png");
+}
 
+.pop-brands__img-bg--SP {
+  background-image: url("../img/brand-color2.png");
+}
 
+.pop-brands__img-bg--GoPro {
+  background-image: url("../img/brand-color3.png");
+} 
+
+.pop-brands__img-bg--VIVE {
+  background-image: url("../img/brand-color4.png");
+}
+
+.pop-brands__link:hover .pop-brands__img {
+  opacity: 0;
+}
 
 
 
