@@ -20,26 +20,22 @@
             <label class="user-nav__search" for="search">
               <span class="visually-hidden">Поиск</span>
             </label>
-            <img class="user-nav__icon--search" src="img/search.svg" width="16" height="16" alt="Поиск">
             <input type="search" name="search" id="search" placeholder="Поиск по сайту">
             <button class="user-nav__button">Найти</button>
             <span class="user-nav__border-bottom"></span>
           </li>
-          <li class="user-nav__item user-nav__item--left">
-            <a href="" class="user-nav__link">
-              <img class="user-nav__icon--user" src="img/user.svg" width="13" height="12" alt="Войти">
+          <li class="user-nav__item user-nav__item--login">
+            <a href="" class="user-nav__link user-nav__login">
               Войти
             </a>
           </li>
-          <li class="user-nav__item user-nav__item--right">
-            <a href="" class="user-nav__link">
-              <img class="user-nav__icon--compare" src="img/compare.svg" width="10" height="10" alt="Сравнить">
+          <li class="user-nav__item">
+            <a href="" class="user-nav__link user-nav__compare">
               Сравнить
             </a>
           </li>
-          <li class="user-nav__item user-nav__item--right">
-            <a href="" class="user-nav__link">
-              <img class="user-nav__icon--cart" src="img/cart.svg" width="12" height="12" alt="Корзина">
+          <li class="user-nav__item user-nav__item--cart">
+            <a href="" class="user-nav__link user-nav__cart">
               Корзина
             </a>
           </li>
@@ -270,7 +266,7 @@
             </button>
           </li>
         </ul>
-        <div class="service__text-wrapper">
+        <div class="service__text-wrapper service__text-wrapper--deliver">
           <h3 class="service__title">Доставка</h3>
           <p class="service__text">
             Мы с удовольствием доставим ваш товар прямо к вашему<br>
@@ -278,7 +274,7 @@
             заработаем, поднимая его на ваш этаж.
           </p>
         </div>
-        <div class="service__text-wrapper display-none">
+        <div class="service__text-wrapper service__text-wrapper--waranty display-none">
           <h3 class="service__title">Гарантия</h3>
           <p class="service__text">
             Если из-за возгорания купленного у нас товара у вас сгорит<br>
@@ -286,7 +282,7 @@
             Товар, не дом, конечно же.
           </p>
         </div>
-        <div class="service__text-wrapper display-none">
+        <div class="service__text-wrapper service__text-wrapper--credit display-none">
           <h3 class="service__title">Кредит</h3>
           <p class="service__text">
             Залезть в долговую яму стало проще! Кредитные<br>
@@ -379,73 +375,70 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper container">
       <div class="footer__address">
-        <img src="img/device.svg" width="163" height="35" alt="DEVICE">
+        <img class="main-footer__img--logo" src="img/device.svg" width="163" height="35" alt="DEVICE">
         <address>
           г. Москва, ул. Строителей, 15
         </address>
         <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       </div>
       <div class="footer__link-wrapper">
-        <div class="footer__nav">
-          <ul class="footer__list--nav">
-            <li class="footer__item--nav">
-              <a href="" class="footer__link--nav">
-                Доставка
-              </a>
-            </li>
-            <li class="footer__item--nav">
-              <a href="" class="footer__link--nav">
-                Гарантия
-              </a>
-            </li>
-            <li class="footer__item--nav">
-              <a href="" class="footer__link--nav">
-                Контакты
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul class="footer__list--nav">
+          <li class="footer__item--nav">
+            <a href="" class="footer__link--nav">
+              Доставка
+            </a>
+          </li>
+          <li class="footer__item--nav">
+            <a href="" class="footer__link--nav">
+              Гарантия
+            </a>
+          </li>
+          <li class="footer__item--nav">
+            <a href="" class="footer__link--nav">
+              Контакты
+            </a>
+          </li>
+        </ul>
         <ul class="footer__list--social">
           <li class="footer__item--social">
-            <a href="" class="footer__link--social">
-              <img class="footer__social-icon" src="img/fb.svg" alt="Facebook">
+            <a href="" class="footer__link--social footer__link--fb">
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
           <li class="footer__item--social">
-            <a href="" class="footer__link--social">
-              <img class="footer__social-icon" src="img/inst.svg" alt="Instagram">
+            <a href="" class="footer__link--social footer__link--inst">
               <span class="visually-hidden">Instagram</span>
             </a>
           </li>
           <li class="footer__item--social">
-            <a href="" class="footer__link--social">
-              <img class="footer__social-icon" src="img/tw.svg" alt="Twitter">
+            <a href="" class="footer__link--social footer__link--tw">
               <span class="visually-hidden">Twitter</span>
             </a>
           </li>
         </ul>
       </div>
-      <ul class="footer__list--user">
-        <li class="footer__item--user">
-          <a href="" class="footer__link--user">
-            Войти
-          </a>
-        </li>
-        <li class="footer__item--user">
-          <a href="" class="footer__link--user">
-            Сравнить
-          </a>
-        </li>
-        <li class="footer__item--user">
-          <a href="" class="footer__link--user">
-            Корзина
-          </a>
-        </li>
-      </ul>
-      <a href="" class="footer__link--dev">
-        <img class="footer__image--dev" src="img/logo-htmlacademy.svg" alt="Сделано в HTML Academy">
-      </a>
+      <div class="footer__user-menu-wrapper">
+        <ul class="footer__list--user">
+          <li class="footer__item--user">
+            <a href="" class="footer__link--user footer__link--login">
+              Войти
+            </a>
+          </li>
+          <li class="footer__item--user">
+            <a href="" class="footer__link--user footer__link--compare">
+              Сравнить
+            </a>
+          </li>
+          <li class="footer__item--user">
+            <a href="" class="footer__link--user footer__link--cart">
+              Корзина
+            </a>
+          </li>
+        </ul>
+        <a href="" class="footer__link--dev">
+          <img class="footer__image--dev" src="img/logo-htmlacademy.svg" alt="Сделано в HTML Academy">
+        </a>
+      </div>
     </div>
   </footer>
 
