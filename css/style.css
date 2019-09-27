@@ -1285,20 +1285,25 @@ body {
   opacity: 0.3;
 }
 
-.footer__icon--user {
-  margin-right: 9px;
+.footer__link--dev {
+  position: relative;
 }
 
-.footer__icon--compare {
-  margin-right: 6px;
+.footer__link--dev::before {
+  position: absolute;
+
+  width: 27px;
+  height: 35px;
+  content: "";
 }
 
-.footer__icon--cart {
-  margin-right: 6px;
+.footer__link--dev:hover {
+  opacity: 0.6;
 }
 
-
-
+.footer__link--dev:active {
+  opacity: 0.3;
+}
 
 
 .display-none {
