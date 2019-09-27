@@ -498,6 +498,7 @@ body {
   position: relative;
 
   display: flex;
+  align-items: baseline;
   order: 3;
   margin-bottom: 34px;
 }
@@ -508,7 +509,7 @@ body {
 
   width: 220px;
   height: 40px;
-  margin-right: 179px;
+  margin-right: 171px;
   overflow: hidden;
 
   font-family: 'Gilroy', Arial, sans-serif;
@@ -542,6 +543,11 @@ body {
 
 .slider__button:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.slider__control {
+  background-color: transparent;
+  border: none;
 }
 
 .pop-section {
