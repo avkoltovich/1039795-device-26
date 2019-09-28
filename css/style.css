@@ -153,6 +153,8 @@ body {
 
   background-color: transparent;
   border: 2px solid #000;
+
+  transition: 0.2s;
 }
 
 .user-nav__button:hover {
@@ -175,18 +177,23 @@ body {
   display: block;
 }
 
-.user-nav__button:hover~.user-nav__border-bottom::after,
-.user-nav__button:active~.user-nav__border-bottom::after,
-.user-nav__button:focus~.user-nav__border-bottom::after,
-#search:focus~.user-nav__border-bottom::after {
+.user-nav__border-bottom {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 1;
 
-  width: 100%;
+  width: 0px;
   height: 2px;
-  content: "";
+
+  transition: 0.2s;
+}
+
+.user-nav__button:hover~.user-nav__border-bottom,
+.user-nav__button:active~.user-nav__border-bottom,
+.user-nav__button:focus~.user-nav__border-bottom,
+#search:focus~.user-nav__border-bottom {
+  width: 100%;
 
   background-color: #000;
 }
@@ -532,11 +539,13 @@ body {
   height: 8px;
 
   background-color: #f0c52e;
+
+  transition: height 0.2s, transform 0.2s;
 }
 
 .slider__button:active .slider__button-bg,
 .slider__button:hover .slider__button-bg {
-  bottom: 0;
+  transform: translateY(16px);
 
   height: 100%;
 }
@@ -705,6 +714,7 @@ body {
 
   border: none;
   background-color: transparent;
+  transition: height 0.2s, transform 0.2s;
 }
 
 .service__button-bg {
@@ -717,10 +727,12 @@ body {
   height: 8px;
 
   background-color: #f0c52e;
+
+  transition: height 0.2s, transform 0.2s;
 }
 
 .service__button:hover .service__button-bg {
-  bottom: 0;
+  transform: translateY(16px);
 
   height: 100%;
 }
@@ -824,6 +836,10 @@ body {
   padding-left: 0;
 
   list-style: none;
+}
+
+.pop-brands__img {
+  transition: opacity 0.3s;
 }
 
 .pop-brands__img-bg--DJI {
@@ -947,11 +963,13 @@ body {
   height: 8px;
 
   background-color: #f0c52e;
+
+  transition: height 0.2s, transform 0.2s;
 }
 
 .about__button:active .about__button-bg,
 .about__button:hover .about__button-bg {
-  bottom: 0;
+  transform: translateY(16px);
 
   height: 100%;
 }
@@ -1034,11 +1052,13 @@ body {
   height: 8px;
 
   background-color: #f0c52e;
+
+  transition: height 0.2s, transform 0.2s;
 }
 
 .contacts__button:active .contacts__button-bg,
 .contacts__button:hover .contacts__button-bg {
-  bottom: 0;
+  transform: translateY(16px);
 
   height: 100%;
 }
