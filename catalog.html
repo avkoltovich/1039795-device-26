@@ -171,60 +171,87 @@
         <div class="sorting-catalog-wrapper">
           <section class="sorting">
             <h2 class="sorting__title">Сортировка:</h2>
-            <ul class="sorting__list">
-              <li class="sorting__item">
-                <button class="sorting__button">По цене</button>
-              </li>
-              <li class="sorting__item">
-                <button class="sorting__button">По типу</button>
-              </li>
-              <li class="sorting__item">
-                <button class="sorting__button">По популярности</button>
-              </li>
-              <li class="sorting__item--up">
-                <button class="sorting__button--up"><span>По возрастанию</span></button>
-              </li>
-              <li class="sorting__item--down">
-                <button class="sorting__button--down">По убыванию</button>
-              </li>
-            </ul>
+            <fieldset>
+              <label class="sorting__item" for="price">
+                <input type="radio" name="sorting" id="price" checked>
+                <span>По цене</span>
+              </label>
+              <label class="sorting__item" for="type">
+                <input type="radio" name="sorting" id="type">
+                <span>По типу</span>
+              </label>
+              <label class="sorting__item" for="pop">
+                <input type="radio" name="sorting" id="pop">
+                <span>По популярности</span>
+              </label>
+            </fieldset>
+            <fieldset class="sorting__arrow-block">
+              <label class="sorting__item" for="up">
+                <input type="radio" name="soting-arrow" id="up">
+                <span class="sorting__arrow--up"></span>
+                <span class="visually-hidden">По возрастанию</span>
+              </label>
+              <label class="sorting__item" for="down">
+                  <input type="radio" name="soting-arrow" id="down" checked>
+                  <span class="sorting__arrow--down"></span>
+                  <span class="visually-hidden">По убыванию</span>
+                </label>
+            </fieldset>
           </section>
           <section class="catalog">
             <h2 class="visually-hidden">Каталог товаров</h2>
             <ul class="catalog__list">
               <li class="catalog__item">
-                <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-                <h3 class="catalog__item-title">Любительская селфи-палка</h3>
-                <b class="catalog__item-price">500 руб.</b>
+                <a class="catalog__link" href="">
+                  <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                  <div class="catalog__text-wrapper">
+                    <h3 class="catalog__item-title">Любительская селфи-палка</h3>
+                    <b class="catalog__item-price">500 руб.</b>
+                  </div>
+                </a>
               </li>
               <li class="catalog__item">
-                <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-                <h3 class="catalog__item-title">Профессиональная селфи-палка</h3>
-                <b class="catalog__item-price">1 500 руб.</b>
+                <a class="catalog__link" href="">
+                  <img src="img/item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                  <div class="catalog__text-wrapper">
+                    <h3 class="catalog__item-title">Профессиональная<br> селфи-палка</h3>
+                    <b class="catalog__item-price">1 500 руб.</b>
+                  </div>
+                </a>
               </li>
               <li class="catalog__item">
-                <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-                <h3 class="catalog__item-title">Непотопляемая селфи-палка</h3>
-                <b class="catalog__item-price">2 500 руб.</b>
+                <a class="catalog__link" href="">
+                  <img src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                  <div class="catalog__text-wrapper">
+                    <h3 class="catalog__item-title">Непотопляемая селфи-палка</h3>
+                    <b class="catalog__item-price">2 500 руб.</b>
+                  </div>
+                </a>
               </li>
               <li class="catalog__item">
-                <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-                <h3 class="catalog__item-title">Селфи-палка «Следуй за мной»</h3>
-                <b class="catalog__item-price">4 900 руб.</b>
+                <a class="catalog__link" href="">
+                  <img src="img/item-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+                  <div class="catalog__text-wrapper">
+                    <h3 class="catalog__item-title">Селфи-палка «Следуй за мной»</h3>
+                    <b class="catalog__item-price">4 900 руб.</b>
+                  </div>
+                </a>
               </li>
             </ul>
             <ul class="catalog__pagination">
               <li class="pagination__item">
                 <a href="" class="pagination__link">Назад</a>
               </li>
-              <li class="pagination__item">
-                <a href="" class="pagination__link">1</a>
-              </li>
-              <li class="pagination__item">
-                <a href="" class="pagination__link">2</a>
-              </li>
-              <li class="pagination__item">
-                <a href="" class="pagination__link">3</a>
+              <div class="pagination__item-wrapper">
+                <li class="pagination__item">
+                  <a href="" class="pagination__link">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="" class="pagination__link">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="" class="pagination__link">3</a>
+              </div>
               </li>
               <li class="pagination__item">
                 <a href="" class="pagination__link">Вперед</a>
