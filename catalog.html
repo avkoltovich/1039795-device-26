@@ -16,13 +16,15 @@
       </a>
       <div class="user-nav">
         <ul class="user-nav__list">
-          <li class="user-nav__item user-nav__item--search">
-            <label class="user-nav__search" for="search">
-              <span class="visually-hidden">Поиск</span>
-            </label>
-            <input type="search" name="search" id="search" placeholder="Поиск по сайту">
-            <button class="user-nav__button">Найти</button>
-            <span class="user-nav__border-bottom"></span>
+          <li class="user-nav__item">
+            <form class="user-nav__form--search" action="https://up.htmlacademy.ru/htmlcss/26">
+              <label class="user-nav__search" for="search">
+                <span class="visually-hidden">Поиск</span>
+              </label>
+              <input type="search" name="search" id="search" placeholder="Поиск по сайту">
+              <button class="user-nav__button" type="submit">Найти</button>
+              <span class="user-nav__border-bottom"></span>
+            </form>
           </li>
           <li class="user-nav__item user-nav__item--login">
             <a href="" class="user-nav__link user-nav__login">
@@ -192,10 +194,10 @@
                 <span class="visually-hidden">По возрастанию</span>
               </label>
               <label class="sorting__item" for="down">
-                  <input type="radio" name="soting-arrow" id="down" checked>
-                  <span class="sorting__arrow--down"></span>
-                  <span class="visually-hidden">По убыванию</span>
-                </label>
+                <input type="radio" name="soting-arrow" id="down" checked>
+                <span class="sorting__arrow--down"></span>
+                <span class="visually-hidden">По убыванию</span>
+              </label>
             </fieldset>
           </section>
           <section class="catalog">

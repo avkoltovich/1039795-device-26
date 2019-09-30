@@ -104,7 +104,9 @@ body {
   letter-spacing: 0.15px;
 }
 
-.user-nav__item--search {
+.user-nav__form--search {
+  position: relative;
+
   display: flex;
   align-items: center;
   width: 441px;
@@ -126,7 +128,7 @@ body {
   margin-left: 64px;
 }
 
-.user-nav__item--search input {
+.user-nav__form--search input {
   width: 100%;
   height: 100%;
   padding-right: 20px;
@@ -138,7 +140,7 @@ body {
   opacity: 0.3;
 }
 
-.user-nav__item--search .user-nav__button {
+.user-nav__form--search .user-nav__button {
   display: none;
 
   width: 85px;
