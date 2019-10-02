@@ -79,15 +79,17 @@ body {
 
 .nav__img--logo {
   margin-top: -18px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .user-nav__list {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   padding-left: 0;
   padding-right: 61px;
   margin-top: 0;
+  margin-bottom: 33px;
 
   list-style: none;
 }
@@ -104,20 +106,25 @@ body {
   letter-spacing: 0.15px;
 }
 
+.user-nav__item--search {
+  width: 441px;
+  height: 49px;
+  margin-right: 125px;
+}
+
 .user-nav__form--search {
   position: relative;
 
   display: flex;
-  align-items: center;
+  
   width: 441px;
   height: 49px;
   padding: 0;
   padding-left: 18px;
-  margin-right: 125px;
 
   background-image: url("../img/search.svg");
   background-repeat: no-repeat;
-  background-position: 4px 50%;
+  background-position: 4px 12px;
 }
 
 .user-nav__item--login {
@@ -171,7 +178,7 @@ body {
 .user-nav__button:focus {
   display: block;
 }
-
+ 
 .user-nav__border-bottom {
   position: absolute;
   right: 0;
@@ -592,7 +599,6 @@ body {
   font-weight: 300;
   line-height: 1;
   color: rgba(0, 0, 0, 0.2);
-
 }
 
 .filter__color {
@@ -828,6 +834,11 @@ body {
   text-transform: uppercase;
 }
 
+.sorting form {
+  display: flex;
+  width: 100%;
+}
+
 .sorting fieldset {
   margin: 0;
   padding: 0;
@@ -954,25 +965,23 @@ fieldset.sorting__arrow-block {
 }
 
 .catalog__pagination {
+  position: relative;
+
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: -26px;
   margin-bottom: 76px;
-  padding-top: 24px;
-  padding-right: 30px;
+  padding-top: 25px;
   padding-bottom: 22px;
-  padding-left: 30px;
+  padding-left: 6px;
 
   list-style: none;
   background-color: #ebebeb;
 }
 
-.pagination__item-wrapper {
-  display: flex;
-  padding-left: 45px;
-}
-
 .pagination__item  {
+  margin-right: 28px;
+
   font-family: 'Gilroy', Arial, sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -981,8 +990,20 @@ fieldset.sorting__arrow-block {
   text-transform: uppercase;
 }
 
-.pagination__item-wrapper .pagination__item {
-  margin-right: 31px;
+.pagination__item:first-child {
+  position: absolute;
+  left: 32px;
+}
+
+.pagination__item:nth-last-child(2) {
+  margin-right: 0;
+}
+
+.pagination__item:last-child {
+  position: absolute;
+  right: 25px;
+
+  margin-right: 0;
 }
 
 .pagination__link {
@@ -993,7 +1014,7 @@ fieldset.sorting__arrow-block {
 .slider {
   position: relative;
 
-  margin-bottom: 93px;
+  margin-bottom: 106px;
   min-height: 420px;
 }
 

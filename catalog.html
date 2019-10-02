@@ -11,12 +11,12 @@
 <body>
   <header class="header container">
     <nav class="nav">
-      <a class="nav__link--logo">
+      <a class="nav__link--logo" href="index.html">
         <img class="nav__img--logo" src="img/logo.svg" alt="DEVICE">
       </a>
       <div class="user-nav">
         <ul class="user-nav__list">
-          <li class="user-nav__item">
+          <li class="user-nav__item user-nav__item--search">
             <form class="user-nav__form--search" action="https://up.htmlacademy.ru/htmlcss/26">
               <label class="user-nav__search" for="search">
                 <span class="visually-hidden">Поиск</span>
@@ -46,7 +46,7 @@
       <div class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item main-nav__item--catalog">
-            <a href="" class="main-nav__link main-nav__link--catalog">
+            <a href="catalog.html" class="main-nav__link main-nav__link--catalog">
               Каталог товаров
               <img class="main-nav__icon" src="img/plus.svg" width="16" height="16" alt="Раскрыть">
             </a>
@@ -173,6 +173,7 @@
         <div class="sorting-catalog-wrapper">
           <section class="sorting">
             <h2 class="sorting__title">Сортировка:</h2>
+            <form action="">
             <fieldset>
               <label class="sorting__item" for="price">
                 <input type="radio" name="sorting" id="price" checked>
@@ -199,6 +200,7 @@
                 <span class="visually-hidden">По убыванию</span>
               </label>
             </fieldset>
+          </form>
           </section>
           <section class="catalog">
             <h2 class="visually-hidden">Каталог товаров</h2>
@@ -244,16 +246,14 @@
               <li class="pagination__item">
                 <a href="" class="pagination__link">Назад</a>
               </li>
-              <div class="pagination__item-wrapper">
-                <li class="pagination__item">
-                  <a href="" class="pagination__link">1</a>
-                </li>
-                <li class="pagination__item">
-                  <a href="" class="pagination__link">2</a>
-                </li>
-                <li class="pagination__item">
-                  <a href="" class="pagination__link">3</a>
-              </div>
+              <li class="pagination__item">
+                <a href="" class="pagination__link">1</a>
+              </li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link">2</a>
+              </li>
+              <li class="pagination__item">
+                <a href="" class="pagination__link">3</a>
               </li>
               <li class="pagination__item">
                 <a href="" class="pagination__link">Вперед</a>
