@@ -875,6 +875,14 @@ fieldset.sorting__arrow-block {
   cursor: pointer;
 }
 
+.sorting__item span:hover {
+  opacity: 0.6;
+}
+
+.sorting__item span:active {
+  opacity: 1;
+}
+
 .sorting__arrow--up {
   position: absolute;
   top: 6px;
