@@ -872,6 +872,7 @@ fieldset.sorting__arrow-block {
 
 .sorting__item span {
   opacity: 0.3;
+  cursor: pointer;
 }
 
 .sorting__arrow--up {
