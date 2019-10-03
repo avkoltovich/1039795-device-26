@@ -1904,6 +1904,14 @@ fieldset.sorting__arrow-block {
   padding-top: 65px;
 }
 
+.main-footer__link--logo:hover {
+  opacity: 0.6;
+}
+
+.main-footer__link--logo:active {
+  opacity: 0.3;
+}
+
 .main-footer__img--logo {
   margin-right: 163px;
   margin-bottom: 21px;
@@ -1926,7 +1934,7 @@ fieldset.sorting__arrow-block {
   font-style: normal;
 }
 
-.footer__address a {
+.main-footer__tel{
   position: absolute;
   top: 130px;
   right: 0;
