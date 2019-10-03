@@ -157,6 +157,7 @@ body {
   border: 2px solid #000;
 
   transition: 0.2s;
+  cursor: pointer;
 }
 
 .user-nav__button:hover {
@@ -666,9 +667,14 @@ body {
   background-size: 24px 20px;
 }
 
-.filter__checkbox:focus+.filter__checkbox-img,
 .filter__checkbox:hover+.filter__checkbox-img {
   opacity: 0.6;
+}
+
+.filter__checkbox:focus+.filter__checkbox-img {
+  opacity: 1;
+
+  outline: 2px dotted #000;
 }
 
 .filter__checkbox:disabled+.filter__checkbox-img {
@@ -743,9 +749,14 @@ body {
   background-image: url("../img/radio-on.svg");
 }
 
-.filter__radio:focus+.filter__radio-img,
 .filter__radio:hover+.filter__radio-img {
   opacity: 0.6;
+}
+
+.filter__radio:focus+.filter__radio-img {
+  opacity: 1;
+
+  outline: 2px dotted #000;
 }
 
 .filter__radio:disabled+.filter__radio-img {
@@ -767,10 +778,10 @@ body {
 
   border: none;
   background-color: transparent;
-  transition: height 0.2s, transform 0.2s;
+  cursor: pointer;
 }
 
-.filter__button-bg {
+.filter__button::before {
   position: absolute;
   left: 0px;
   bottom: calc(50% - 4px);
@@ -778,35 +789,22 @@ body {
 
   width: 200px;
   height: 8px;
+  content: "";
 
   background-color: #f0c52e;
 
   transition: height 0.2s, transform 0.2s;
 }
 
-.filter__button:hover .filter__button-bg {
+.filter__button:active::before,
+.filter__button:hover::before {
   transform: translateY(16px);
 
   height: 100%;
 }
 
 .filter__button:active {
-  color: #f7e184;
-
-  background-color: #000;
-}
-
-.filter__button:active::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-  width: 278px;
-  height: 100%;
-  content: "";
-
-  background-color: #000;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .sorting-catalog-wrapper {
@@ -918,6 +916,8 @@ fieldset.sorting__arrow-block {
 }
 
 .catalog__item {
+  position: relative;
+
   display: inline-block;
   width: 360px;
   padding: 0;
@@ -926,13 +926,27 @@ fieldset.sorting__arrow-block {
   vertical-align: top;
 }
 
+.catalog__item--hit::before {
+  position: absolute;
+  top: 28px;
+  right: 27px;
+
+  width: 60px;
+  height: 60px;
+  content: "";
+
+  background-image: url("../img/new.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .catalog__item:nth-child(2n+1) {
   margin-right: 36px;
 }
 
-.catalog__link {
-  text-decoration: none;
-  color: inherit;
+.catalog__img {
+  max-width: 360px;
+  max-height: 380px;
 }
 
 .catalog__text-wrapper {
@@ -963,6 +977,96 @@ fieldset.sorting__arrow-block {
   color: #464646;
 }
 
+.catalog__buttons-wrap {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 380px;
+
+  background-color: rgba(238, 238, 238, 0.7);
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.catalog__buttons-wrap:hover {
+  opacity: 1;
+}
+
+.catalog__button--cart {
+  position: relative;
+  z-index: 2;
+
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin-top: 170px;
+  margin-right: auto;
+  margin-bottom: 6px;
+  margin-left: auto;
+
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.catalog__button--cart::before {
+  position: absolute;
+  left: 0px;
+  bottom: calc(50% - 4px);
+  z-index: -2;
+
+  width: 200px;
+  height: 8px;
+  content: "";
+
+  background-color: #f0c52e;
+
+  transition: height 0.2s, transform 0.2s;
+}
+
+.catalog__button--cart:active::before,
+.catalog__button--cart:hover::before {
+  transform: translateY(16px);
+
+  height: 100%;
+}
+
+.catalog__button--cart:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog__button--compare {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 2.77;
+  letter-spacing: 0.13px;
+  color: rgba(0, 0, 0, 0.5);
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.catalog__button--compare:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.catalog__button--compare:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .catalog__pagination {
   position: relative;
 
@@ -991,7 +1095,28 @@ fieldset.sorting__arrow-block {
 
 .pagination__item:first-child {
   position: absolute;
-  left: 32px;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+}
+
+.pagination__item:first-child .pagination__link {
+  display: block;
+  height: 100%;
+  padding-top: 23px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  color: #000;
+}
+
+.pagination__item:first-child .pagination__link:hover {
+  background-color: #d9d9d9;
+}
+
+.pagination__item:first-child .pagination__link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination__item:nth-last-child(2) {
@@ -1000,14 +1125,46 @@ fieldset.sorting__arrow-block {
 
 .pagination__item:last-child {
   position: absolute;
-  right: 25px;
+  top: 0;
+  right: 0;
 
+  height: 100%;
   margin-right: 0;
+}
+
+.pagination__item:last-child .pagination__link {
+  display: block;
+  height: 100%;
+  padding-top: 23px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  color: #000;
+}
+
+.pagination__item:last-child .pagination__link:hover {
+  background-color: #d9d9d9;
+}
+
+.pagination__item:last-child .pagination__link:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination__link {
   text-decoration: none;
-  color: inherit;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination__link:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination__link:active {
+  color: rgba(0, 0, 0, 1);
+}
+
+.pagination__item [aria-current="page"] {
+  color: #000;
 }
 
 .slider {
@@ -1178,24 +1335,26 @@ fieldset.sorting__arrow-block {
 
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.slider__button-bg {
+.slider__button::before {
   position: absolute;
   left: 0px;
   bottom: calc(50% - 4px);
-  z-index: -1;
+  z-index: -2;
 
   width: 220px;
   height: 8px;
+  content: "";
 
   background-color: #f0c52e;
 
   transition: height 0.2s, transform 0.2s;
 }
 
-.slider__button:active .slider__button-bg,
-.slider__button:hover .slider__button-bg {
+.slider__button:active::before,
+.slider__button:hover::before {
   transform: translateY(16px);
 
   height: 100%;
@@ -1365,10 +1524,10 @@ fieldset.sorting__arrow-block {
 
   border: none;
   background-color: transparent;
-  transition: height 0.2s, transform 0.2s;
+  cursor: pointer;
 }
 
-.service__button-bg {
+.service__button::before {
   position: absolute;
   left: 0px;
   bottom: calc(50% - 4px);
@@ -1376,13 +1535,14 @@ fieldset.sorting__arrow-block {
 
   width: 160px;
   height: 8px;
+  content: "";
 
   background-color: #f0c52e;
 
   transition: height 0.2s, transform 0.2s;
 }
 
-.service__button:hover .service__button-bg {
+.service__button:hover::before {
   transform: translateY(16px);
 
   height: 100%;
@@ -1394,7 +1554,7 @@ fieldset.sorting__arrow-block {
   background-color: #000;
 }
 
-.service__button:active::before {
+.service__button:active::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -1411,7 +1571,7 @@ fieldset.sorting__arrow-block {
   color: #f7e184;
 }
 
-.service__item--current .service__button-bg {
+.service__item--current .service__button::before {
   display: none;
 }
 
@@ -1604,22 +1764,23 @@ fieldset.sorting__arrow-block {
   background-color: transparent;
 }
 
-.about__button-bg {
+.about__button::before {
   position: absolute;
   left: 0px;
   bottom: calc(50% - 4px);
-  z-index: -1;
+  z-index: -2;
 
   width: 260px;
   height: 8px;
+  content: "";
 
   background-color: #f0c52e;
 
   transition: height 0.2s, transform 0.2s;
 }
 
-.about__button:active .about__button-bg,
-.about__button:hover .about__button-bg {
+.about__button:active::before,
+.about__button:hover::before {
   transform: translateY(16px);
 
   height: 100%;
@@ -1691,24 +1852,26 @@ fieldset.sorting__arrow-block {
 
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
-.contacts__button-bg {
+.contacts__button::before {
   position: absolute;
   left: 0px;
   bottom: calc(50% - 4px);
-  z-index: -1;
+  z-index: -2;
 
   width: 260px;
   height: 8px;
+  content: "";
 
   background-color: #f0c52e;
 
   transition: height 0.2s, transform 0.2s;
 }
 
-.contacts__button:active .contacts__button-bg,
-.contacts__button:hover .contacts__button-bg {
+.contacts__button:active::before,
+.contacts__button:hover::before {
   transform: translateY(16px);
 
   height: 100%;
