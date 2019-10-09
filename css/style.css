@@ -285,6 +285,14 @@ body {
   margin-right: 296px;
 }
 
+.main-nav__item--catalog:hover .main-nav__link {
+  color: rgba(0, 0, 0, 0.6)
+}
+
+.main-nav__item--catalog:hover .main-nav__link:active {
+  color: rgba(0, 0, 0, 0.3)
+}
+
 .main-nav__item--left {
   margin-right: 34px;
 }
@@ -1891,6 +1899,213 @@ fieldset.sorting__arrow-block {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.map {
+  position: relative;
+
+  display: none;
+}
+
+.map__wrapper {
+  position: fixed;
+  top: 25vh;
+  left: calc(50% - 480px);
+  z-index: 10;
+
+  width: 960px;
+  height: 559px;
+
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.map__button--close {
+  position: absolute;
+  top: 22px;
+  right: 14px;
+
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+}
+
+.map__button--close:hover {
+  opacity: 1;
+}
+
+.map__button--close:active {
+  opacity: 0.3;
+}
+
+.modal {
+  position: relative;
+
+  display: none;
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 25vh;
+  left: calc(50% - 480px);
+  z-index: 10;
+
+  width: 960px;
+  padding-top: 100px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+  padding-left: 100px;
+
+  background-color: #fff;
+  box-shadow: 0px 10px 20px 0 rgba(4, 6, 6, 0.2);
+}
+
+.modal__button--close {
+  position: absolute;
+  top: 22px;
+  right: 14px;
+
+  background-color: transparent;
+  border: none;
+  opacity: 0.5;
+}
+
+.modal__button--close:hover {
+  opacity: 1;
+}
+
+.modal__button--close:active {
+  opacity: 0.3;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.modal__label {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal__label-text {
+  margin-bottom: 13px;
+
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.33;
+}
+
+.modal__input {
+  width: 360px;
+  height: 50px;
+  padding-right: 17px;
+  padding-left: 17px;
+
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #464646;
+
+  background-color: #f2f2f2;
+  border: solid 3px #f2f2f2;
+}
+
+.modal__textarea {
+  width: 760px;
+  height: 156px;
+  padding-top: 11px;
+  padding-right: 17px;
+  padding-left: 17px;
+  margin-bottom: 40px;
+
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #464646;
+
+  background-color: #f2f2f2;
+  border: solid 3px #f2f2f2;
+}
+
+.modal__input::placeholder,
+.modal__textarea::placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal__input:-ms-input-placeholder,
+.modal__textarea:-ms-input-placeholder {
+  color: rgba(70, 70, 70, 0.4);
+}
+
+.modal__input:hover,
+.modal__textarea:hover {
+  background-color: #eaeaea;
+  border-color: #eaeaea;
+}
+
+.modal__input:focus,
+.modal__textarea:focus {
+  background-color: #fff;
+  border: solid 3px #f0c52e;
+}
+
+.modal__input:invalid,
+.modal__textarea:invalid {
+  background-color: #f6dada;
+  border: solid 3px #f6dada;
+}
+
+.modal__button--submit {
+  position: relative;
+  z-index: 2;
+
+  width: 200px;
+  height: 40px;
+  margin-right: 179px;
+  overflow: hidden;
+
+  font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 3.6px;
+  text-transform: uppercase;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.modal__button--submit::before {
+  position: absolute;
+  left: 0px;
+  bottom: calc(50% - 4px);
+  z-index: -2;
+
+  width: 200px;
+  height: 8px;
+  content: "";
+
+  background-color: #f0c52e;
+
+  transition: height 0.2s, transform 0.2s;
+}
+
+.modal__button--submit:active::before,
+.modal__button--submit:hover::before {
+  transform: translateY(16px);
+
+  height: 100%;
+}
+
+.modal__button--submit:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .main-footer {
   min-height: 323px;
 
@@ -1905,17 +2120,17 @@ fieldset.sorting__arrow-block {
   padding-top: 65px;
 }
 
+.main-footer__link--logo {
+  margin-right: 140px;
+  margin-bottom: 21px;
+}
+
 .main-footer__link--logo:hover {
   opacity: 0.6;
 }
 
 .main-footer__link--logo:active {
   opacity: 0.3;
-}
-
-.main-footer__img--logo {
-  margin-right: 163px;
-  margin-bottom: 21px;
 }
 
 .footer__address {
