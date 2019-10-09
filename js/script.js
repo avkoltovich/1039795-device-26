@@ -37,12 +37,6 @@ catalogSubmenuLinks[lastSubmenuLink].addEventListener("keydown", function (evt) 
   }
 });
 
-// Проверка текущей страницы
-
-var fileName = location.href.split("/").slice(-1);
-
-if (fileName == "index.html") {
-
 // Слайдер на цикле
   
 var slideButtons = document.querySelectorAll('.slider__control');
@@ -194,5 +188,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-}
