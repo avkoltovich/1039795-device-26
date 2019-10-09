@@ -68,7 +68,7 @@ body {
 
   min-height: 186px;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
   padding-left: 59px;
   padding-bottom: 33px;
 
@@ -197,13 +197,13 @@ body {
 .user-nav__button:hover~.user-nav__border-bottom,
 .user-nav__button:active~.user-nav__border-bottom,
 .user-nav__button:focus~.user-nav__border-bottom,
-#search:focus~.user-nav__border-bottom {
+.user-nav__search-input:focus~.user-nav__border-bottom {
   width: 100%;
 
   background-color: #000;
 }
 
-#search:focus~.user-nav__button {
+.user-nav__search-input:focus~.user-nav__button {
   display: block;
 }
 
@@ -327,6 +327,7 @@ body {
 }
 
 .main-nav__item--catalog {
+  height: 26px;
   margin-right: 296px;
 }
 
@@ -352,6 +353,8 @@ body {
 }
 
 .main-nav__link--catalog {
+  z-index: 4;
+
   display: flex;
   align-items: center;
 }
@@ -372,13 +375,13 @@ body {
 
 .nav-catalog__wrapper {
   position: absolute;
-  top: 133px;
+  top: 138px;
   left: 0px;
   z-index: 3;
 
   display: none;
   width: 100%;
-  min-height: 166px;
+  min-height: 160px;
   padding-top: 34px;
 
   padding-left: 40px;

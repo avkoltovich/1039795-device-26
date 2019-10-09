@@ -1,7 +1,10 @@
-// Выпадающее меню
+// Выпадающее меню с возможностью перемещения ТАБом
 
 var catalogItem = document.querySelector('.main-nav__item--catalog');
+var catalogLink = document.querySelector('.main-nav__link--catalog');
 var catalogSubmenu = document.querySelector('.nav-catalog__wrapper');
+var catalogSubmenuLinks = document.querySelectorAll('.submenu__link');
+var lastSubmenuLink = catalogSubmenuLinks.length - 1;
 
 catalogItem.addEventListener('mouseenter', function () {
   catalogSubmenu.classList.add('nav-catalog-show');
@@ -9,6 +12,29 @@ catalogItem.addEventListener('mouseenter', function () {
 
 catalogItem.addEventListener('mouseleave', function () {
   catalogSubmenu.classList.remove('nav-catalog-show');
+});
+
+catalogLink.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 13) {
+    evt.preventDefault();
+    catalogSubmenu.classList.add('nav-catalog-show');
+  }
+});
+
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (catalogSubmenu.classList.contains('nav-catalog-show')) {
+      catalogSubmenu.classList.remove('nav-catalog-show');
+    }
+  }
+});
+
+catalogSubmenuLinks[lastSubmenuLink].addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 9) {
+    evt.preventDefault();
+    catalogSubmenuLinks[0].focus();
+  }
 });
 
 // Проверка текущей страницы
@@ -146,7 +172,7 @@ closeButton.addEventListener("click", function (evt) {
 formContacts.addEventListener("submit", function (evt) {
   if (!userName.value || !userEmail.value || !userText.value) {
     evt.preventDefault();
-    popupModal.classList.remove("modal-error");
+    popupModal.classList.remove('modal-error');
     popupModal.classList.remove('modal-show--animation');
     popupModal.offsetWidth = popupModal.offsetWidth;
     popupModal.classList.add("modal-error");
@@ -158,13 +184,13 @@ formContacts.addEventListener("submit", function (evt) {
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (popupModalSection.classList.contains("modal-show")) {
-      popupModalSection.classList.remove("modal-show");
-      popupModalSection.classList.remove("modal-error");
+    if (popupModalSection.classList.contains('modal-show')) {
+      popupModalSection.classList.remove('modal-show');
+      popupModalSection.classList.remove('modal-error');
       popupModal.classList.remove('modal-show--animation');
     }
-    if (popupMapSection.classList.contains("modal-show")) {
-      popupMapSection.classList.remove("modal-show");
+    if (popupMapSection.classList.contains('modal-show')) {
+      popupMapSection.classList.remove('modal-show');
     }
   }
 });
