@@ -44,7 +44,7 @@ var serviceItems = document.querySelectorAll('.service__item');
 var serviceButtons = document.querySelectorAll('.service__button');
 var serviceSlides = document.querySelectorAll('.service__text-wrapper');
 
-var removeClass = function () {
+var ServiceRemoveClass = function () {
   for (var i = 0; i < serviceSlides.length; i++) {
     serviceSlides[i].classList.remove('service__show');
   };
@@ -53,11 +53,11 @@ var removeClass = function () {
   };
 };
 
-var addButtonClickHandler = function (slide, item, btn) {
-  btn.addEventListener('click', function (evt) {
+var addButtonClickHandler = function (text, item, ServiceBtn) {
+  ServiceBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
-    removeClass();
-    slide.classList.add('service__show');
+    ServiceRemoveClass();
+    text.classList.add('service__show');
     item.classList.add('service__item--current');
   });
 };
