@@ -11,12 +11,14 @@ catalogItem.addEventListener('mouseleave', function () {
   catalogSubmenu.classList.remove('nav-catalog-show');
 });
 
-var fileName = location.href.split("/").slice(-1);
+// Проверка текущей страницы
 
-// Слайдер на цикле
+var fileName = location.href.split("/").slice(-1);
 
 if (fileName == "index.html") {
 
+// Слайдер на цикле
+  
 var slideButtons = document.querySelectorAll('.slider__control');
 var slides = document.querySelectorAll('.slider__item');
 
