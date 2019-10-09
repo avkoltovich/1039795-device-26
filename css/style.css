@@ -331,9 +331,9 @@ body {
   position: absolute;
   top: 133px;
   left: 0px;
-  z-index: -1;
+  z-index: 3;
 
-  display: block;
+  display: none;
   width: 100%;
   min-height: 166px;
   padding-top: 34px;
@@ -341,7 +341,10 @@ body {
   padding-left: 40px;
 
   background-color: #f8e296;
-  opacity: 0;
+}
+
+.nav-catalog-show {
+  display: block;
 }
 
 .nav-catalog__list {
@@ -380,18 +383,6 @@ body {
 .nav-catalog__link:active {
   color: rgba(0, 0, 0, 0.3)
 }
-
-.main-nav__item--catalog:hover .nav-catalog__wrapper {
-  z-index: 3;
-
-  opacity: 1;
-}
-
-/* .nav-catalog__wrapper:hover {
-  z-index: 3;
-
-  opacity: 1;
-} */
 
 .main__title-wrapper {
   padding-left: 60px;

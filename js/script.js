@@ -1,3 +1,16 @@
+// Выпадающее меню
+
+var catalogItem = document.querySelector('.main-nav__item--catalog');
+var catalogSubmenu = document.querySelector('.nav-catalog__wrapper');
+
+catalogItem.addEventListener('mouseenter', function () {
+  catalogSubmenu.classList.add('nav-catalog-show');
+});
+
+catalogItem.addEventListener('mouseleave', function () {
+  catalogSubmenu.classList.remove('nav-catalog-show');
+});
+
 // Слайдер на цикле
 
 var slideButtons = document.querySelectorAll('.slider__control');
