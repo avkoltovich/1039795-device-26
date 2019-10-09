@@ -11,7 +11,11 @@ catalogItem.addEventListener('mouseleave', function () {
   catalogSubmenu.classList.remove('nav-catalog-show');
 });
 
+var fileName = location.href.split("/").slice(-1);
+
 // Слайдер на цикле
+
+if (fileName == "index.html") {
 
 var slideButtons = document.querySelectorAll('.slider__control');
 var slides = document.querySelectorAll('.slider__item');
@@ -162,3 +166,5 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+}
