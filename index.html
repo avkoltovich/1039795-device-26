@@ -92,9 +92,9 @@
   </header>
   <main>
     <h1 class="visually-hidden">Гаджеты с оригинальным дизайном</h1>
-    <section class="slider container">
+    <section class="slider slide container">
       <h2 class="visually-hidden">Популярные товары</h2>
-      <figure class="slider__item">
+      <figure class="slider__item slide__one slider__show">
         <img class="slider__img slider__img--stick" src="img/slide1.png" width="384" height="486"
           alt="Монопод для селфи">
         <figcaption class="slider__figcaption">
@@ -122,21 +122,10 @@
             <button class="slider__button">
               Подробнее
             </button>
-            <div class="slider__control-list">
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-current.png" alt="Первый слайд">
-              </button>
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-empty.png" alt="Второй слайд">
-              </button>
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-empty.png" alt="Третий слайд">
-              </button>
-            </div>
           </div>
         </figcaption>
       </figure>
-      <figure class="slider__item display-none">
+      <figure class="slider__item slide__two">
         <img class="slider__img slider__img--watch" src="img/slide2.png" width="345" height="485" alt="Фитнес браслет">
         <figcaption class="slider__figcaption">
           <h3 class="slider__title">Худеем<br> правильно!</h3>
@@ -155,21 +144,10 @@
             <button class="slider__button">
               Подробнее
             </button>
-            <div class="slider__control-list">
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-empty.png" alt="Первый слайд">
-              </button>
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-current.png" alt="Второй слайд">
-              </button>
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-empty.png" alt="Третий слайд">
-              </button>
-            </div>
           </div>
         </figcaption>
       </figure>
-      <figure class="slider__item display-none">
+      <figure class="slider__item slide__three">
         <img class="slider__img slider__img--quadro" src="img/slide3.png" width="526" height="334" alt="Квадрокоптер">
         <figcaption class="slider__figcaption">
           <h3 class="slider__title">Порхает как бабочка,<br>жалит как пчела!</h3>
@@ -192,20 +170,23 @@
             <button class="slider__button">
               Подробнее
             </button>
-            <div class="slider__control-list">
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-empty.png" alt="Первый слайд">
-              </button>
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-empty.png" alt="Второй слайд">
-              </button>
-              <button class="slider__control" type="button">
-                <img src="img/slider-button-current.png" alt="Третий слайд">
-              </button>
-            </div>
           </div>
         </figcaption>
       </figure>
+      <div class="slider__control-list">
+        <button class="slider__control slide__btn--one current-slide" type="button">
+          <span class="visually-hidden">Первый слайд</span>
+          <span class="slider__control-bullet"></span>
+        </button>
+        <button class="slider__control slide__btn--two" type="button">
+          <span class="visually-hidden">Второй слайд</span>
+          <span class="slider__control-bullet"></span>
+        </button>
+        <button class="slider__control slide__btn--three" type="button">
+          <span class="visually-hidden">Третий слайд</span>
+          <span class="slider__control-bullet"></span>
+        </button>
+      </div>
     </section>
     <section class="pop-section container">
       <h2 class="visually-hidden">Популярные разделы каталога</h2>
@@ -264,23 +245,23 @@
       <h2 class="visually-hidden">Сервис</h2>
       <div class="service__wrapper container">
         <ul class="service__list">
-          <li class="service__item service__item--current">
-            <button class="service__button">
+          <li class="service__item service__item--deliver service__item--current">
+            <button class="service__button service__button--deliver">
               Доставка
             </button>
           </li>
-          <li class="service__item">
-            <button class="service__button">
+          <li class="service__item service__item--waranty">
+            <button class="service__button service__button--waranty">
               Гарантия
             </button>
           </li>
-          <li class="service__item">
-            <button class="service__button">
+          <li class="service__item service__item--credit">
+            <button class="service__button service__button--credit">
               Кредит
             </button>
           </li>
         </ul>
-        <div class="service__text-wrapper service__text-wrapper--deliver">
+        <div class="service__text-wrapper service__text-wrapper--deliver service__show">
           <h3 class="service__title">Доставка</h3>
           <p class="service__text">
             Мы с удовольствием доставим ваш товар прямо к вашему<br>
@@ -288,7 +269,7 @@
             заработаем, поднимая его на ваш этаж.
           </p>
         </div>
-        <div class="service__text-wrapper service__text-wrapper--waranty display-none">
+        <div class="service__text-wrapper service__text-wrapper--waranty">
           <h3 class="service__title">Гарантия</h3>
           <p class="service__text">
             Если из-за возгорания купленного у нас товара у вас сгорит<br>
@@ -296,7 +277,7 @@
             Товар, не дом, конечно же.
           </p>
         </div>
-        <div class="service__text-wrapper service__text-wrapper--credit display-none">
+        <div class="service__text-wrapper service__text-wrapper--credit">
           <h3 class="service__title">Кредит</h3>
           <p class="service__text">
             Залезть в долговую яму стало проще! Кредитные<br>
@@ -376,7 +357,8 @@
         <p class="contacts__text">
           Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете
           проверить работоспособность покупки. Всякое бывает.
-          <img class="contacts__map" src="img/map.png" width="560" height="222" alt="улица Строителей, 15">
+          <button class="map__button" type="button"><img class="contacts__map" src="img/map.png" width="560"
+              height="222" alt="улица Строителей, 15"></button>
         </p>
         <button class="contacts__button" type="button">
           НАпишите нам
@@ -482,15 +464,20 @@
     </div>
   </section>
   <section class="map container">
+    <h2 class="visually-hidden">Карта</h2>
     <div class="map__wrapper">
       <button class="map__button--close">
-        <img src="img/modal-close.svg" alt="Закрыть окно">
+          <img src="img/modal-close.svg" alt="Закрыть окно">
       </button>
-      <img src="img/map-big-jpg.jpg" width="960" height="559" alt="улица Строителей, 15">
+      <div class="map__block" id="map">
+        <img class="map__img" src="img/map-big-jpg.jpg" width="960" height="559" alt="Москва, ул. Строителей, 15">
+      </div>
     </div>
   </section>
 
-
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=%3c23515868-9b39-49c7-a160-8952aa0e8fd6%3e">
+  </script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
