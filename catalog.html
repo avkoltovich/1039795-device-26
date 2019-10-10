@@ -29,9 +29,9 @@
           </li>
           <li class="user-nav__item user-nav__item--login">
             <span class="user-nav__loged">
-              <span class="user-nav__name">
+              <a href="" class="user-nav__link user-nav__name">
                 Валентин Петухов
-              </span>
+              </a>
               <a href="" class="user-nav__link--logout">
                 Выйти
               </a>
@@ -117,7 +117,7 @@
       <div class="main__container container">
         <section class="filter">
           <h2 class="filter__heading">Фильтр:</h2>
-          <form action="">
+          <form method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filter__price">
               <legend class="filter__name">Стоимость</legend>
               <button class="filter__price-btn filter__price-btn--left" type="button">
@@ -178,30 +178,30 @@
         <div class="sorting-catalog-wrapper">
           <section class="sorting">
             <h2 class="sorting__title">Сортировка:</h2>
-            <form action="">
+            <form method="get" action="https://echo.htmlacademy.ru">
               <fieldset>
                 <label class="sorting__item" for="price">
-                  <input type="radio" name="sorting" id="price" checked>
-                  <span>По цене</span>
+                  <input class="sorting__input" type="radio" name="sorting" id="price" checked>
+                  <span class="sorting__span">По цене</span>
                 </label>
                 <label class="sorting__item" for="type">
-                  <input type="radio" name="sorting" id="type">
-                  <span>По типу</span>
+                  <input class="sorting__input" type="radio" name="sorting" id="type">
+                  <span class="sorting__span">По типу</span>
                 </label>
                 <label class="sorting__item" for="pop">
-                  <input type="radio" name="sorting" id="pop">
-                  <span>По популярности</span>
+                  <input class="sorting__input" type="radio" name="sorting" id="pop">
+                  <span class="sorting__span">По популярности</span>
                 </label>
               </fieldset>
               <fieldset class="sorting__arrow-block">
                 <label class="sorting__item" for="up">
-                  <input type="radio" name="soting-arrow" id="up">
-                  <span class="sorting__arrow--up"></span>
+                  <input class="sorting__input" type="radio" name="soting-arrow" id="up">
+                  <span class="sorting__span sorting__arrow--up"></span>
                   <span class="visually-hidden">По возрастанию</span>
                 </label>
                 <label class="sorting__item" for="down">
-                  <input type="radio" name="soting-arrow" id="down" checked>
-                  <span class="sorting__arrow--down"></span>
+                  <input class="sorting__input" type="radio" name="soting-arrow" id="down" checked>
+                  <span class="sorting__span sorting__arrow--down"></span>
                   <span class="visually-hidden">По убыванию</span>
                 </label>
               </fieldset>
@@ -213,7 +213,9 @@
               <li class="catalog__item">
                 <img class="catalog__img" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                 <div class="catalog__text-wrapper">
-                  <h3 class="catalog__item-title">Любительская селфи-палка</h3>
+                  <a class="catalog__link" href="">
+                    <h3 class="catalog__item-title">Любительская селфи-палка</h3>
+                  </a>
                   <b class="catalog__item-price">500 руб.</b>
                 </div>
                 <div class="catalog__buttons-wrap">
@@ -227,7 +229,9 @@
                 <img class="catalog__img" src="img/item-2.jpg" width="360" height="380"
                   alt="Профессиональная селфи-палка">
                 <div class="catalog__text-wrapper">
-                  <h3 class="catalog__item-title">Профессиональная<br> селфи-палка</h3>
+                  <a class="catalog__link" href="">
+                    <h3 class="catalog__item-title">Профессиональная<br> селфи-палка</h3>
+                  </a>
                   <b class="catalog__item-price">1 500 руб.</b>
                 </div>
                 <div class="catalog__buttons-wrap">
@@ -240,7 +244,9 @@
               <li class="catalog__item">
                 <img class="catalog__img" src="img/item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                 <div class="catalog__text-wrapper">
-                  <h3 class="catalog__item-title">Непотопляемая селфи-палка</h3>
+                  <a class="catalog__link" href="">
+                    <h3 class="catalog__item-title">Непотопляемая селфи-палка</h3>
+                  </a>
                   <b class="catalog__item-price">2 500 руб.</b>
                 </div>
                 <div class="catalog__buttons-wrap">
@@ -254,7 +260,9 @@
                 <img class="catalog__img" src="img/item-4.jpg" width="360" height="380"
                   alt="Селфи-палка «Следуй за мной»">
                 <div class="catalog__text-wrapper">
-                  <h3 class="catalog__item-title">Селфи-палка «Следуй за мной»</h3>
+                  <a class="catalog__link" href="">
+                    <h3 class="catalog__item-title">Селфи-палка «Следуй за мной»</h3>
+                  </a>
                   <b class="catalog__item-price">4 900 руб.</b>
                 </div>
                 <div class="catalog__buttons-wrap">
@@ -337,7 +345,7 @@
       <div class="footer__user-menu-wrapper">
         <ul class="footer__list--user">
           <li class="footer__item--user">
-            <span class="footer__user-name">Валентин Петухов</span>
+            <a href="" class="footer__link--user footer__user-name">Валентин Петухов</a>
             <a href="" class="footer__link--logout">
               Выйти
             </a>
@@ -353,7 +361,7 @@
             </a>
           </li>
         </ul>
-        <a href="" class="footer__link--dev">
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer__link--dev">
           <img class="footer__image--dev" src="img/logo-htmlacademy.svg" alt="Сделано в HTML Academy">
         </a>
       </div>
