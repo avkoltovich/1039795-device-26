@@ -42,6 +42,8 @@ catalogSubmenuLinks[lastSubmenuLink].addEventListener("keydown", function (evt) 
 var slideButtons = document.querySelectorAll('.slider__control');
 var slides = document.querySelectorAll('.slider__item');
 
+if (slides != null) {
+
 var removeClass = function () {
   for (var i = 0; i < slides.length; i++) {
     slides[i].classList.remove('slider__show');
@@ -64,11 +66,15 @@ for (var i = 0; i < slideButtons.length; i++) {
   addButtonClickHandler(slides[i], slideButtons[i]);
 }
 
+}
+
 // Блок Сервис на цикле
 
 var serviceItems = document.querySelectorAll('.service__item');
 var serviceButtons = document.querySelectorAll('.service__button');
 var serviceSlides = document.querySelectorAll('.service__text-wrapper');
+
+if (serviceButtons != null) {
 
 var ServiceRemoveClass = function () {
   for (var i = 0; i < serviceSlides.length; i++) {
@@ -92,10 +98,15 @@ for (var i = 0; i < serviceButtons.length; i++) {
   addButtonClickHandler(serviceSlides[i], serviceItems[i], serviceButtons[i]);
 }
 
+}
+
 // Карта
 
 var buttonMap = document.querySelector('.map__button');
 var popupMapSection = document.querySelector('.map');
+
+if (popupMapSection != null) {
+
 var popupMap = popupMapSection.querySelector('.map__wrapper');
 var closeMapBtn = popupMap.querySelector('.map__button--close');
 
@@ -136,18 +147,21 @@ ymaps.ready(function () {
     .add(myPlacemark);
 });
 
+}
+
 // Модальное окно
 
 var buttonContacts = document.querySelector('.contacts__button');
 var popupModalSection = document.querySelector('.modal');
-var popupModal = popupModalSection.querySelector('.modal__wrapper');
 
+if (popupModalSection != null) {
+
+var popupModal = popupModalSection.querySelector('.modal__wrapper');
 var closeButton = popupModal.querySelector('.modal__button--close');
 var formContacts = popupModal.querySelector('.modal__form');
 var userName = popupModal.querySelector('.modal__input--name');
 var userEmail = popupModal.querySelector('.modal__input--email');
 var userText = popupModal.querySelector('.modal__textarea');
-
 
 buttonContacts.addEventListener('click', function (evt) {
   evt.preventDefault();
@@ -188,3 +202,5 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
+
+}
