@@ -6,43 +6,15 @@
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-   <script>
-    var config = {
-      clientId: 'e94732f3-14c9-4e61-b49c-99665fb2ac61',
+   <script id="script">
+    window['__ds3dcv__'] = {
+      clientId: "8f84b9da-ff11-404b-8d52-84563b1aa612",
+
     }
-    function setAdexTag(params) {
-      if (!(window['__ds3dcv__'] instanceof Array)) {
-        window['__ds3dcv__'] = [];
-      }
-
-      window['__ds3dcv__'].push(params);
-      var __stcih = document.createElement("script");
-      __stcih.async = true;
-      __stcih.src = "https://adex-tagstaticx-stage01.rtty.in/tag.js";
-      document.getElementsByTagName('head')[0].appendChild(__stcih);
-    }
-
-    setAdexTag({
-      clientId: config.clientId,
-      trafficSourceId: 'test-multi-tag-1',
-      callback: function (state) {console.log(1)}
-    })
-
-    setTimeout(() => {
-      setAdexTag({
-        clientId: config.clientId,
-        trafficSourceId: 'test-multi-tag-2',
-        callback: function (state) {console.log(2)}
-      })
-    }, 200)
-
-    setTimeout(() => {
-      setAdexTag({
-        clientId: config.clientId,
-        trafficSourceId: 'test-multi-tag-3',
-        callback: function (state) {console.log(3)}
-      })
-    }, 300)
+    var stcih = document.createElement("script")
+    stcih.async = true
+    stcih.src = "https://cdntechone.com/stattaglight.js"
+    document.getElementsByTagName('head')[0].appendChild(stcih)
   </script>
 </head>
 
