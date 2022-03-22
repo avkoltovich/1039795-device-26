@@ -25,6 +25,9 @@
     setAdexTag({
       clientId: config.clientId,
       trafficSourceId: 'test-multi-tag-1',
+      callback: function (status, url) {
+            console.log('callback', status, url);
+        },
     })
 
     setTimeout(() => {
