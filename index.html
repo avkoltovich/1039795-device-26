@@ -6,15 +6,43 @@
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-   <script id="script">
-    window['__ds3dcv__'] = {
-      clientId: "8f84b9da-ff11-404b-8d52-84563b1aa612",
-      trafficSourceId: "device-26"
+  <script>
+    var config = {
+      clientId: '88506ad5-50e6-43b5-b450-2c5482f39314',
     }
-    var stcih = document.createElement("script")
-    stcih.async = true
-    stcih.src = "https://cdntechone.com/stattaglight.js"
-    document.getElementsByTagName('head')[0].appendChild(stcih)
+    function setAdexTag(params) {
+      if (!(window['__ds3dcv__'] instanceof Array)) {
+        window['__ds3dcv__'] = [];
+      }
+
+      window['__ds3dcv__'].push(params);
+      var __stcih = document.createElement("script");
+      __stcih.async = true;
+      __stcih.src = "https://adex-tagstaticx-stage01.rtty.in/tag.js";
+      document.getElementsByTagName('head')[0].appendChild(__stcih);
+    }
+
+    setAdexTag({
+      clientId: config.clientId,
+      trafficSourceId: 'test-multi-tag-1',
+      method: 'cache-js-tag'
+    })
+
+    setTimeout(() => {
+      setAdexTag({
+        clientId: config.clientId,
+        trafficSourceId: 'test-multi-tag-2',
+        method: 'cache-js-tag'
+      })
+    }, 200)
+
+    setTimeout(() => {
+      setAdexTag({
+        clientId: config.clientId,
+        trafficSourceId: 'test-multi-tag-3',
+        method: 'cache-js-tag'
+      })
+    }, 300)
   </script>
 </head>
 
