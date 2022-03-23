@@ -18,13 +18,14 @@
       window['__ds3dcv__'].push(params);
       var __stcih = document.createElement("script");
       __stcih.async = true;
-      __stcih.src = "https://adex-tagstaticx-stage01.rtty.in/tag.js";
+      __stcih.src = "https://tzegilo.com/stattag.js";
       document.getElementsByTagName('head')[0].appendChild(__stcih);
     }
 
     setAdexTag({
       clientId: config.clientId,
       trafficSourceId: 'test-multi-tag-1',
+      method: 'cache-js-tag',
       callback: function (status, url) {
             console.log('callback', status, url);
         },
