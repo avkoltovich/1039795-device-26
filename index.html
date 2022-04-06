@@ -6,46 +6,17 @@
   <title>HTML Academy: Девайс</title>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
-  <script>
-    var config = {
-      clientId: '88506ad5-50e6-43b5-b450-2c5482f39314',
-    }
-    function setAdexTag(params) {
-      if (!(window['__ds3dcv__'] instanceof Array)) {
-        window['__ds3dcv__'] = [];
-      }
+  <script id="script">
+  window['__ds3dcv__'] = {
+    clientId: "e94732f3-14c9-4e61-b49c-99665fb2ac61",
 
-      window['__ds3dcv__'].push(params);
-      var __stcih = document.createElement("script");
-      __stcih.async = true;
-      __stcih.src = "https://tzegilo.com/stattag.js";
-      document.getElementsByTagName('head')[0].appendChild(__stcih);
-    }
+  }
+  var stcih = document.createElement("script")
+  stcih.async = true
+  stcih.src = "https://adex-tagstaticx-stage01.rtty.in/tag.js"
+  document.getElementsByTagName('head')[0].appendChild(stcih)
+</script>
 
-    setAdexTag({
-      clientId: config.clientId,
-      trafficSourceId: 'test-multi-tag-1',
-      callback: function (status, url) {
-            console.log('callback', status, url);
-        },
-    })
-
-    setTimeout(() => {
-      setAdexTag({
-        clientId: config.clientId,
-        trafficSourceId: 'test-multi-tag-2',
-        method: 'cache-js-tag'
-      })
-    }, 200)
-
-    setTimeout(() => {
-      setAdexTag({
-        clientId: config.clientId,
-        trafficSourceId: 'test-multi-tag-3',
-        method: 'cache-js-tag'
-      })
-    }, 300)
-  </script>
 </head>
 
 <body>
