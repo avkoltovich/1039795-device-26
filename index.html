@@ -7,46 +7,30 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
-    var config = {
-      clientId: '88506ad5-50e6-43b5-b450-2c5482f39314',
+        window[ '__ds3dcv__' ] = {
+          clientId: '88506ad5-50e6-43b5-b450-2c5482f39314',
+          trafficSourceId: 'testpage',
+          urlParams: {
+            trafficSourceId: 'tid',
+            affiliateId: 'aid',
+            advertiserId: 'advid',
+            campaignId: 'camid',
+            customId1: 'cusid1',
+            customId2: 'cusid2',
+            cost: 'cost',
+            clickId: 'clid',
+            fType: 'ftype',
+            fUrl: 'furl',
+            clientId: 'cid',
     }
-    function setAdexTag(params) {
-      if (!(window['__ds3dcv__'] instanceof Array)) {
-        window['__ds3dcv__'] = [];
-      }
+};
 
-      window['__ds3dcv__'].push(params);
-      var __stcih = document.createElement("script");
-      __stcih.async = true;
-      __stcih.src = "https://adex-tagstaticx-stage01.rtty.in/tag.js";
-      document.getElementsByTagName('head')[0].appendChild(__stcih);
-    }
+        var __stcih = document.createElement("script");
+__stcih.async = true;
+__stcih.src = "https://adex-tagstaticx-stage01.rtty.in/tag.js";
+document.getElementsByTagName("head")[ 0 ].appendChild(__stcih);
 
-    setAdexTag({
-      clientId: config.clientId,
-      trafficSourceId: 'test-multi-tag-1',
-      method: 'cache-js-tag',
-      callback: function (status, url) {
-            console.log('callback', status, url);
-        },
-    })
-
-    setTimeout(() => {
-      setAdexTag({
-        clientId: config.clientId,
-        trafficSourceId: 'test-multi-tag-2',
-        method: 'cache-js-tag'
-      })
-    }, 0)
-
-    setTimeout(() => {
-      setAdexTag({
-        clientId: config.clientId,
-        trafficSourceId: 'test-multi-tag-3',
-        method: 'cache-js-tag'
-      })
-    }, 50)
-  </script>
+    </script>
 
 </head>
 
